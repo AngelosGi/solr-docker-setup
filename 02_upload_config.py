@@ -28,3 +28,9 @@ if __name__ == "__main__":
     else:
         print("Failed to upload configuration.")
         sys.exit(1)
+
+
+
+# run python upload_config.py <config_name> or default
+
+

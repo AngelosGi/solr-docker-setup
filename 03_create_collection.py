@@ -39,3 +39,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# run python create_collection.py <collection_name>
