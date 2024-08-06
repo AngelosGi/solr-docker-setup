@@ -1,0 +1,43 @@
+<schema name="parliamentary_speeches" version="1.5">
+  <types>
+    <fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+    <fieldType name="int" class="solr.IntPointField" docValues="true" />
+    <fieldType name="long" class="solr.LongPointField" docValues="true" />
+    <fieldType name="date" class="solr.DatePointField" docValues="true" />
+
+    <fieldType name="text_general" class="solr.TextField" positionIncrementGap="100">
+      <analyzer>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+      </analyzer>
+    </fieldType>
+    </types>
+
+  <fields>
+    <field name="id" type="string" indexed="true" stored="true" required="true"/>
+    <field name="member_name" type="text_general" indexed="true" stored="true"/>
+    <field name="sitting_date" type="date" indexed="true" stored="true"/>
+    <field name="parliamentary_period" type="string" indexed="true" stored="true"/>
+    <field name="parliamentary_session" type="string" indexed="true" stored="true"/>
+    <field name="parliamentary_sitting" type="string" indexed="true" stored="true"/>
+    <field name="political_party" type="text_general" indexed="true" stored="true"/>
+    <field name="government" type="text_general" indexed="true" stored="true"/>
+    <field name="member_region" type="text_general" indexed="true" stored="true"/>
+    <field name="roles" type="text_general" indexed="true" stored="true"/>
+    <field name="member_gender" type="string" indexed="true" stored="true"/>
+    <field name="speech" type="text_general" indexed="true" stored="true"/>
+    <field name="_version_" type="long" indexed="true" stored="true"/>
+
+    <field name="member_name_sort" type="string" indexed="true" stored="false"/>
+    <field name="sitting_date_sort" type="long" indexed="true" stored="false"/>
+    <field name="political_party_facet" type="string" indexed="true" stored="false"/>
+    <field name="member_region_facet" type="string" indexed="true" stored="false"/>
+  </fields>
+
+  <copyField dest="member_name_sort" source="member_name"/>
+  <copyField dest="sitting_date_sort" source="sitting_date"/>
+  <copyField dest="political_party_facet" source="political_party"/>
+  <copyField dest="member_region_facet" source="member_region"/>
+
+  <uniqueKey>id</uniqueKey>
+</schema>
