@@ -23,7 +23,7 @@ def create_collection(collection_name, config_name, num_shards=1, replication_fa
 
 def main():
     if len(sys.argv) < 2:
-        print("How to Use: \npython create_collection.py <collection_name>")
+        print("How to Use: \npython 03_create_collection.py <collection_name>")
         sys.exit(1)
 
     collection_name = sys.argv[1]
