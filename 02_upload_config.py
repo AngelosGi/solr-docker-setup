@@ -31,6 +31,4 @@ if __name__ == "__main__":
 
 
 
-# run python upload_config.py <config_name> or default
-
 
