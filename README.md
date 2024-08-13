@@ -1,4 +1,4 @@
-# SolrCloud Parliamentary Speeches Setup
+# SolrCloud Setup
 
 This project sets up a SolrCloud environment for indexing and searching parliamentary speeches. It can be adapted for other datasets with similar structures. This guide provides detailed, step-by-step instructions for setup, use, and customization.
 
