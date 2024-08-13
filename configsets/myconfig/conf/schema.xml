@@ -29,7 +29,7 @@
     <field name="_version_" type="long" indexed="true" stored="true"/>
 
     <field name="member_name_sort" type="string" indexed="true" stored="false"/>
-    <field name="sitting_date_sort" type="long" indexed="true" stored="false"/>
+    <field name="sitting_date_sort" type="date" indexed="true" stored="false"/>
     <field name="political_party_facet" type="string" indexed="true" stored="false"/>
     <field name="member_region_facet" type="string" indexed="true" stored="false"/>
   </fields>
